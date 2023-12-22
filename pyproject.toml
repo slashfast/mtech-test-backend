@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "test-backend"
+version = "0.1.0"
+description = ""
+authors = ["Vladislav Trofimenko <foss@slashfast.dev>"]
+license = 'MIT'
+
+[tool.poetry.dependencies]
+python = "^3.11"
+psycopg2 = "^2.9.9"
+peewee = "^3.17.0"
+fastapi = "^0.105.0"
+uvicorn = { extras = ["standard"], version = "^0.25.0" }
+uuid6 = "^2023.5.2"
+python-dotenv = "^1.0.0"
+faker = "^21.0.0"
+loguru = "^0.7.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
