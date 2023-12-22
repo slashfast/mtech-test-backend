@@ -33,12 +33,7 @@ makedirs(LOGS_DIR, exist_ok=True)
 logger.add(stdout, format='{time} {level} {message}', filter='my_module', level='INFO')
 logger.add(path.join(LOGS_DIR, f'{datetime.now(UTC).strftime("%Y%m%d%H%M%S")}.log'))
 
-origins = [
-    'http://front:5173',
-    'http://127.0.0.1:5173',
-    'http://localhost:5173',
-    'http://192.168.48.1:35386'
-]
+origins = ['*']
 
 app.add_middleware(
     CORSMiddleware,
